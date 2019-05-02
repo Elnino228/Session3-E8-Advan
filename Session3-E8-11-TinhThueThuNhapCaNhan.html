@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let tongThuNhap=Number(prompt("Nhap tong thu nhap cua ban (trieu VND)"));
+    let mienThue=Number(prompt('Nhap tong so tien duoc mien thue (trieu VND)'));
+    let giamTru=Number(prompt('Nhap tong so tien duoc giam tru (trieu VND)'));
+    let thuNhapChiuThue=tongThuNhap-mienThue;
+    let thuNhapTinhThue=thuNhapChiuThue-giamTru;
+    let thueSuat;
+    let thue;
+    if (thuNhapTinhThue>80) {
+        thueSuat=0.35;
+    } else if (thuNhapTinhThue>52) {
+        thueSuat=0.3;
+    } else if (thuNhapTinhThue>32) {
+        thueSuat=0.25;
+    } else if (thuNhapTinhThue>18) {
+        thueSuat=0.2;
+    } else if (thuNhapTinhThue>10) {
+        thueSuat=0.15;
+    } else if (thuNhapTinhThue>5) {
+        thueSuat=0.1;
+    } else {
+        thueSuat=0.05;
+    }
+    thue=thuNhapTinhThue*thueSuat;
+    alert('Tien thue ban phai dong la: '+thue +'trieu VND');
+</script>
+</body>
+</html>

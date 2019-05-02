@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<script>
+        let a=Number(prompt("Nhap canh a="));
+        let b=Number(prompt('Nhap canh b='));
+        let c=Number(prompt('Nhap canh c= '));
+        if (a>0 && b>0 && c>0 && (a+b>c) && (a+c>b) && (b+c>a)) {
+            if (b==0) {
+                if (c==0) {
+                    alert('PT vo so nghiem')
+                } else {
+                    alert('PT vo nghiem')
+                }
+            }else {
+                alert('PT co 1 nghiem la: '+(-c/b))
+            }
+        } else {
+            delta=b*b-4*a*c;
+            if (delta<0) {
+                alert('PT vo nghiem');
+            } else if (delta==0) {
+                alert('PT co nghiem kep: '+(-b/(2*a)));
+            } else {
+                x1=(-b+Math.sqrt(delta))/(2*a);
+                x2=(-b-Math.sqrt(delta))/(2*a);
+                alert('PT co 2 nghiem phan biet: x1='+x1 +'va x2='+x2);
+            }
+        }
+</script>
+</body>
+</html>

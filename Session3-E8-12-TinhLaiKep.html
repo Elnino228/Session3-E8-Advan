@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let vonBanDau=Number(prompt("Nhap so von ban dau (trieu VND)"));
+    let thoiHan=Number(prompt('Nhap thoi gian gui (nam)'));
+    let laiSuat=Number(prompt('Nhap lai suat (%)'))/100;
+    let tienNamThuN=vonBanDau*Math.pow(1+laiSuat,thoiHan);
+    alert('So tien ban nhan duoc sau'+thoiHan+' thang la: '+tienNamThuN);
+</script>
+</body>
+</html>
